@@ -1,11 +1,9 @@
 <?php
 
-require_once 'src/Conta.php';
-require_once 'src/Endereco.php';
-require_once 'src/Pessoa.php';
-require_once 'src/Titular.php';
-require_once 'src/Cpf.php';
-require_once 'src/Funcionario.php';
+require_once 'autoload.php';
+
+use Alura\Banco\Modelo\Conta\{Titular, Conta};
+use Alura\Banco\Modelo\{Endereco, Cpf};
 
 $endereco = new Endereco('Ribeirão Preto', 'Um bairro', 'Uma rua', '2454');
 $primeiraConta = new Conta(new Titular(new Cpf('123.456.789-10'), 'Vinicius Francischini', $endereco));
