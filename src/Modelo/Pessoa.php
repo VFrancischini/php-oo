@@ -2,7 +2,7 @@
 
 namespace Alura\Banco\Modelo;
 
-class Pessoa
+abstract class Pessoa
 {
     protected string $nome;
     private Cpf $cpf;
@@ -30,11 +30,5 @@ class Pessoa
             echo 'Nome precisa ter pelo menos 5 caracteres';
             exit();
         }
-    }
-
-    public function alteraNome(string $nome): void
-    {
-        $this->validaNomeTitular($nome);
-        $this->nome = $nome;
     }
 }
